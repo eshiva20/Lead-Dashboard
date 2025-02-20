@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lead Dashboard</title>
+  </head>
+  <body>
+    <main class="home">
+      <header class="header">
+        <img
+          src="./assets/hbl_logo.png"
+          class="hbl-logo"
+          alt="Health Biotech Limited"
+        />
+        <div class="profile">
+          <img
+            src="./assets/profile_image.jpg"
+            class="profile-image"
+            alt="Profile Image"
+          />
+          <div>
+            <p class="profile-name">Hi Varunn</p>
+            <p class="profile-position">Sales Person</p>
+          </div>
+
+          <i class="fa-solid fa-angle-down select-icon"></i>
+        </div>
+      </header>
+      <section class="report-dashboard">
+        <div class="reports-actions">
+          <div class="report-action">
+            <i class="fa-solid fa-sitemap report-action-icon"></i>
+            <p class="report-text">Leads</p>
+          </div>
+          <div class="report-action">
+            <i class="fa-solid fa-sitemap report-action-icon"></i>
+            <p class="report-text">Orders</p>
+          </div>
+          <div class="report-action">
+            <i class="fa-solid fa-sitemap report-action-icon"></i>
+            <p class="report-text">Sales vs Revenue</p>
+          </div>
+          <div class="report-action">
+            <i class="fa-solid fa-sitemap report-action-icon"></i>
+            <p class="report-text">Customer comparing</p>
+          </div>
+        </div>
+        <div class="title-cover">
+          <h1 class="title">Report Dashboard</h1>
+          <div class="input-div">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="reports-content">
+          <div class="filters">
+            <div class="select-div">
+              <label for="sales">Sales person</label>
+              <select name="sales" id="sales">
+                <option value="All">All</option>
+                <option value="Person1">Person1</option>
+                <option value="Person2">Person2</option>
+                <option value="Person3">Person3</option>
+                <option value="Person4">Person4</option>
+                <option value="Person5">Person5</option>
+              </select>
+            </div>
+            <div class="select-div">
+              <label for="monthly">Monthly</label>
+              <select name="monthly" id="monthly">
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+              </select>
+            </div>
+            <div class="select-div">
+              <label for="date">Date Range</label>
+              <input type="date" name="date" id="date" placeholder="select" />
+            </div>
+            <div class="sold-type-tabs">
+              <button class="sold-type-btn">Domestic</button>
+              <button class="sold-type-btn">Export</button>
+            </div>
+          </div>
+          <div class="all-types-of-tabs">
+            <button class="type-tab">All</button>
+            <button class="type-tab">India Mart</button>
+            <button class="type-tab">India Mart</button>
+            <button class="type-tab">India Mart</button>
+            <button class="type-tab">India Mart</button>
+            <button class="type-tab">India Mart</button>
+          </div>
+          <div class="reports-container">
+            <div class="reports-container-left">
+              <div class="cards">
+                <div class="card blue">
+                  <p>Total leads</p>
+                  <b>500</b>
+                </div>
+                <div class="card dark-green">
+                  <p>New leads</p>
+                  <b>200</b>
+                </div>
+                <div class="card purple">
+                  <p>Converted</p>
+                  <b>200</b>
+                </div>
+                <div class="card marron">
+                  <p>Existing leads</p>
+                  <b>300</b>
+                </div>
+                <div class="card orange">
+                  <p>Follow ups</p>
+                  <b>500</b>
+                </div>
+                <div class="card green">
+                  <p>Whatsapp</p>
+                  <b>200</b>
+                </div>
+                <div class="card pink">
+                  <p>Email</p>
+                  <b>200</b>
+                </div>
+                <div class="card red">
+                  <p>Not coverted</p>
+                  <b>300</b>
+                </div>
+              </div>
+              <div class="chart">Chart</div>
+            </div>
+            <div class="reports-container-right">
+              <div class="map-container">
+                <p>Leads Location</p>
+                <img src="./assets/map.png" alt="Map" class="map-img" />
+                <i class="fa-solid fa-maximize maximize-icon"></i>
+              </div>
+              <div class="products-container">
+                <h1>Top 10 Demanding products</h1>
+                <div class="select-div">
+                  <label for="source">Source</label>
+                  <select name="source" id="source">
+                    <option value="" hidden>Select</option>
+                    <option value="india-mart">India Mart</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                  </select>
+                </div>
+                <h2 class="source-name">India Mart</h2>
+                <ul class="product-list">
+                  <li class="product-name">1. Paracetamol 100 Mg</li>
+                  <li class="product-name">2. Paracetamol 100 Mg</li>
+                  <li class="product-name">3. Paracetamol 100 Mg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
