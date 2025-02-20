@@ -295,11 +295,38 @@ p {
               color: #c8413e;
             }
           }
-          .chart {
+          .chart-container {
             margin-top: 15px;
-            height: 320px;
-            background: #f1f3ff;
-            border-radius: 8px;
+
+            .tabs-btns {
+              display: grid;
+              align-items: flex-end;
+              grid-template-columns: repeat(8, 1fr);
+              gap: 2px;
+
+              .tab-btn:nth-child(1) {
+                background: #2d3aac;
+                color: #fff;
+                height: 28px;
+              }
+              .tab-btn {
+                background: #eeeeee;
+                color: #949494;
+                font-family: "Rubik", serif;
+                font-size: 12px;
+                height: 35px;
+                text-align: center;
+                border-radius: 4px 4px 0px 0px;
+                white-space: nowrap;
+                border: none;
+                outline: none;
+              }
+            }
+
+            .chart {
+              height: 320px;
+              background: #f1f3ff;
+            }
           }
         }
         .reports-container-right {
