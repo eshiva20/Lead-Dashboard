@@ -1,0 +1,67 @@
+{
+  "leadsSummary": {
+    "totalLeads": 500,
+    "newLeads": 200,
+    "convertedLeads": 200,
+    "existingLeads": 300,
+    "followUps": 500,
+    "whatsappLeads": 200,
+    "emailLeads": 200,
+    "notConvertedLeads": 300
+  },
+  "salesPersons": [
+    "All",
+    "Rahul Sharma",
+    "Amit Verma",
+    "Priya Mehta",
+    "Sandeep Yadav",
+    "Neha Kapoor"
+  ],
+  "monthlyData": ["April", "May", "June", "July", "August", "September"],
+  "leadSources": [
+    "All",
+    "India Mart",
+    "Website",
+    "Cold Calls",
+    "Referrals",
+    "Events"
+  ],
+  "topProducts": {
+    "India Mart": [
+      "Paracetamol 100 Mg",
+      "Amoxicillin 250 Mg",
+      "Vitamin C Tablets",
+      "Ibuprofen 400 Mg"
+    ],
+    "Website": [
+      "Vitamin C Tablets",
+      "Protein Supplements",
+      "Herbal Products",
+      "Pain Relievers",
+      "Health Drinks",
+      "Probiotic Capsules",
+      "Weight Loss Supplements",
+      "Omega 3 Capsules",
+      "Skin Care Supplements",
+      "Immunity Boosters"
+    ]
+  },
+  "monthlyChartData": {
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "data": [100, 40, 70, 90, 75, 80, 60, 78, 35, 65, 85, 95]
+  },
+  "leadsLocation": "./assets/map.png"
+}
