@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -141,7 +142,7 @@
                   <b>300</b>
                 </div>
               </div>
-              <div class="chart-container">
+              <div class="chart-container-cover">
                 <div class="tabs-btns">
                   <button class="tab-btn">Total leads</button>
                   <button class="tab-btn">New Leads</button>
@@ -152,7 +153,9 @@
                   <button class="tab-btn">Email</button>
                   <button class="tab-btn">Not converted</button>
                 </div>
-                <div class="chart">chart</div>
+                <div class="chart">
+                  <canvas id="barChart"></canvas>
+                </div>
               </div>
             </div>
             <div class="reports-container-right">
@@ -186,5 +189,90 @@
         </div>
       </section>
     </main>
+    <script>
+      const ctx = document.getElementById("barChart").getContext("2d");
+
+      function getGradient(ctx, chartArea) {
+        let gradient = ctx.createLinearGradient(
+          0,
+          chartArea.top,
+          0,
+          chartArea.bottom
+        );
+        gradient.addColorStop(0, "#A8DEFF");
+        gradient.addColorStop(0.88, "#2D3AAC");
+        return gradient;
+      }
+
+      const chartData = {
+        labels: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ],
+        datasets: [
+          {
+            label: "Monthly Data",
+            data: [100, 40, 70, 90, 75, 80, 60, 78, 35, 65, 85, 95],
+            backgroundColor: (context) => {
+              const { chart } = context;
+              if (!chart.chartArea) return;
+              return getGradient(chart.ctx, chart.chartArea);
+            },
+            borderRadius: 25,
+          },
+        ],
+      };
+
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: chartData,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            legend: false,
+            y: {
+              grid: {
+                display: false,
+              },
+              ticks: {
+                display: false,
+              },
+              border: {
+                display: false,
+              },
+            },
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: {
+                color: "#20313A",
+                font: {
+                  size: 14,
+                },
+              },
+              border: {
+                display: false,
+              },
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
